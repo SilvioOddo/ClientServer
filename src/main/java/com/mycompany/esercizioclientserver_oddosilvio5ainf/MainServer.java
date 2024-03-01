@@ -12,6 +12,8 @@ package com.mycompany.esercizioclientserver_oddosilvio5ainf;
 public class MainServer {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Server mioServer = new Server(2024); //la nPorta può essere un qualsiasi numero
+        mioServer.attendi();
+        
     }
 }
