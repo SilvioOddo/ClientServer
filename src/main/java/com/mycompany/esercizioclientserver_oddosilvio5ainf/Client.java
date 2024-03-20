@@ -12,7 +12,7 @@ import java.net.*;
  */
 public class Client {
     String nomeServer = "nomeServer";
-    int nPorta = 6768;
+    int nPorta = 2024;
     DataInputStream in;
     DataOutputStream out;
     
