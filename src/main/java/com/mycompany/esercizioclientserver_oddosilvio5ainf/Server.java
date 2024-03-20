@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Studenti
+ * @author SO
  */
 public class Server {
     int nPorta;
