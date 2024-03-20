@@ -7,7 +7,7 @@ package com.mycompany.esercizioclientserver_oddosilvio5ainf;
 
 /**
  *
- * @author Studenti
+ * @author SO
  */
 public class MainServer {
 
