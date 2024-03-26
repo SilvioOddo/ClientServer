@@ -4,6 +4,8 @@
  */
 
 package com.mycompany.esercizioclientserver_oddosilvio5ainf;
+import java.io.*;
+import java.net.*;
 
 /**
  *
@@ -12,6 +14,8 @@ package com.mycompany.esercizioclientserver_oddosilvio5ainf;
 public class MainClient {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Client c = new Client("gabriele","viola");
+        c.connetti("127.0.0.1",2000);
+        c.chiudi();
     }
 }
