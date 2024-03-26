@@ -24,4 +24,13 @@ public class Client {
         
         return socket;
     }
+
+    public void scrivi() {
+    }
+
+    public void leggi() {
+    }
+
+    public void chiudi(){
+    } 
 }
