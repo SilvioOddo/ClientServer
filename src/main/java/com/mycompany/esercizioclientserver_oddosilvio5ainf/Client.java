@@ -2,35 +2,52 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.esercizioclientserver_oddosilvio5ainf;
-import java.io.*;
-import java.net.*;
+package client.server;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
- * @author SO
+ * @author gabri
  */
 public class Client {
-    String nomeServer = "nomeServer";
-    int nPorta = 2024;
-    DataInputStream in;
-    DataOutputStream out;
+    String nomeDefault;
+    String coloreDefault;
+    Socket s;
     
-    protected Socket connetti () throws IOException {
-        Socket socket = new Socket(nomeServer, nPorta);
+    public Client(String nomeDefault,  String coloreDefault){
+        this.nomeDefault=nomeDefault;
+        this.coloreDefault=coloreDefault;
+    }
+    
+    public void connetti(String nomeServer, int portaServer){
+        try{
+            s = new Socket(nomeServer,portaServer);
+            System.out.println("il client ha richiesto una connessione");
+        }catch(UnknownHostException ue){
+            System.err.println("errore DNS");
+        }catch (IOException ex) {
+            System.err.println("errore nella comunicazione");
+        }
+    }        
+    public void scrivi(){
+    
+    }
+    
+    public void leggi(){
         
-        out = new DataOutputStream(socket.getOutputStream());
-        in = new DataInputStream(socket.getInputStream());
-        
-        return socket;
     }
-
-    public void scrivi() {
-    }
-
-    public void leggi() {
-    }
-
+    
     public void chiudi(){
-    } 
+        try {
+            s.close();
+            System.out.println("il client ha chiuso la oomunicazione con il server");
+        } catch (IOException ex) {
+            System.err.println("errore nella fase di chiusra delal connessione");
+        }
+    }   
 }
