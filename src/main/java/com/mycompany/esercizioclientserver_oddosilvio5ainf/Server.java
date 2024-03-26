@@ -43,7 +43,14 @@ public class Server {
     
     public void leggi(){}
     
-    public void chiudi(){}
+    public void chiudi(){
+        try {
+            clientSocket.close();
+            System.out.println("chiusura connessione con il client avvenuta");
+        } catch (IOException ex) {
+            System.err.println("errore nella chiuisura della connessione con il cleint");
+        }
+    }
     
     public void termina(){
         try {
