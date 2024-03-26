@@ -2,8 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package client.server;
 
+package com.mycompany.esercizioclientserver_oddosilvio5ainf;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -24,9 +24,9 @@ public class Client {
         this.coloreDefault=coloreDefault;
     }
     
-    public void connetti(String nomeServer, int portaServer){
+    public void connetti(String nomeServer, int nPorta){
         try{
-            s = new Socket(nomeServer,portaServer);
+            s = new Socket(nomeServer,nPorta);
             System.out.println("il client ha richiesto una connessione");
         }catch(UnknownHostException ue){
             System.err.println("errore DNS");
@@ -45,7 +45,7 @@ public class Client {
     public void chiudi(){
         try {
             s.close();
-            System.out.println("il client ha chiuso la oomunicazione con il server");
+            System.out.println("il client ha chiuso la comunicazione con il server");
         } catch (IOException ex) {
             System.err.println("errore nella fase di chiusra delal connessione");
         }
