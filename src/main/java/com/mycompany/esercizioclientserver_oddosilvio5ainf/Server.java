@@ -45,10 +45,10 @@ public class Server {
     
     public void chiudi(){
         try {
-            clientSocket.close();
-            System.out.println("chiusura connessione con il client avvenuta");
+            socket.close();
+            System.out.println("Chiusura connessione con il client avvenuta");
         } catch (IOException ex) {
-            System.err.println("errore nella chiuisura della connessione con il cleint");
+            System.err.println("Errore nella chiuisura della connessione con il client");
         }
     }
     
