@@ -14,6 +14,7 @@ public class MainServer {
     public static void main(String[] args) {
         Server mioServer = new Server(2024); //la nPorta può essere un qualsiasi numero
         mioServer.attendi();
+        mioServer.chiudi();
         
     }
 }
