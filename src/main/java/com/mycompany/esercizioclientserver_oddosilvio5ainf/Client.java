@@ -19,9 +19,9 @@ public class Client {
     String coloreDefault;
     Socket s;
     
-    public Client(String nomeDefault,  String coloreDefault){
-        this.nomeDefault=nomeDefault;
-        this.coloreDefault=coloreDefault;
+    public Client(String nomeDefault, String coloreDefault){
+        this.nomeDefault = nomeDefault;
+        this.coloreDefault = coloreDefault;
     }
     
     public void connetti(String nomeServer, int nPorta){
