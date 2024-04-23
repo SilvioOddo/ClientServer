@@ -9,7 +9,7 @@ import java.net.*;
 
 /**
  *
- * @author SO
+ * @author Silvio Oddo
  */
 public class MainClient {
 
